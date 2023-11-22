@@ -1,8 +1,8 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;1,100;1,200;1,300;1,400&display=swap');
 
 :root {
-  --background: #000000;
-  --card: #0A0A0A;
+  --background: #0A0A0A;
+  --card: #000000;
   --titulo: #e4e4e4;
   --texto: #C8F8DB;
   --efeitos: rgb(49, 191, 42);
