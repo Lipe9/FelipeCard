@@ -26,7 +26,9 @@ p {
   color: #fff;
   margin: 0px;
 }
-
+.content  p {
+  margin: 10px
+}
 .face {
   width: 400px;
   height: 600px;
