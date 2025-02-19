@@ -127,17 +127,3 @@ p {
   100% { transform: translateY(-100%); }
 }
 
-/* Responsiveness */
-@media (max-width: 768px) {
-  .card, .card-back {
-    height: 400px;
-    padding: 16px;
-  }
-}
-
-@media (max-width: 480px) {
-  .card, .card-back {
-    height: 350px;
-    padding: 12px;
-  }
-}
