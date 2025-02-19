@@ -1,5 +1,7 @@
+/* Importando fonte */
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400&display=swap');
 
+/* Variáveis de cores */
 :root {
   --background: #0A0A0A;
   --card: #000000;
@@ -8,6 +10,7 @@
   --efeitos: rgb(49, 191, 42);
 }
 
+/* Reset de estilos */
 * {
   margin: 0;
   padding: 0;
@@ -21,8 +24,7 @@ body {
   align-items: center;
   justify-content: center;
   min-height: 100vh;
-  cursor: pointer;
-  scroll-behavior: smooth;
+  padding: 20px;
 }
 
 p {
@@ -31,27 +33,29 @@ p {
 }
 
 .face {
-  width: 90%;
+  width: 100%;
   max-width: 400px;
   height: auto;
+  position: relative;
+  perspective: 1000px;
 }
 
 .card, .card-back {
   width: 100%;
-  max-width: 25rem;
+  max-width: 400px;
   height: 500px;
   background: var(--card);
-  padding: 24px;
+  padding: 25px;
   display: flex;
   flex-direction: column;
-  justify-content: center;
   align-items: center;
+  justify-content: center;
   text-align: justify;
   position: absolute;
   border-radius: 0.2rem;
-  box-shadow: 0 8px 10px 0;
+  box-shadow: 0 8px 10px 0 rgba(0, 0, 0, 0.5);
   overflow: hidden;
-  transition: all 0.4s ease;
+  transition: transform 0.4s ease;
 }
 
 .card-back {
@@ -61,15 +65,12 @@ p {
 
 .face.active .card {
   transform: rotateY(180deg);
-  z-index: 0;
 }
 
 .face.active .card-back {
-  transform: rotateX(0);
-  z-index: 1;
+  transform: rotateY(0);
 }
 
-/* Animations */
 .card span {
   position: absolute;
   background: var(--efeitos);
@@ -88,42 +89,84 @@ p {
   100% { transform: translateX(100%); }
 }
 
-.card span:nth-of-type(2) {
-  top: 0;
-  right: 0;
-  width: 3px;
-  height: 100%;
-  animation: animar2 2s linear infinite 1s;
+.content h3 {
+  text-align: center;
+  color: var(--titulo);
+  font-size: 1.5rem;
 }
 
-@keyframes animar2 {
-  0% { transform: translateY(-100%); }
-  100% { transform: translateY(100%); }
+.image img {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  border: 2px solid var(--efeitos);
+  animation: borderAnimated 5s linear infinite;
 }
 
-.card span:nth-of-type(3) {
-  bottom: 0;
-  right: 0;
-  width: 100%;
-  height: 3px;
-  animation: animar3 2s linear infinite;
+@keyframes borderAnimated {
+  0%, 100% { border-color: #2abf3b; }
+  50% { border-color: #17ae3a; }
 }
 
-@keyframes animar3 {
-  0% { transform: translateX(100%); }
-  100% { transform: translateX(-100%); }
+#read-btn {
+  width: 10rem;
+  height: 2.5rem;
+  background-color: var(--efeitos);
+  border: none;
+  color: var(--titulo);
+  font-size: 1rem;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: all 0.3s ease-in;
 }
 
-.card span:nth-of-type(4) {
-  top: 0;
-  left: 0;
-  width: 3px;
-  height: 100%;
-  animation: animar4 2s linear infinite 1s;
+#read-btn:hover {
+  background: transparent;
+  color: var(--efeitos);
+  border: 1px solid var(--efeitos);
 }
 
-@keyframes animar4 {
-  0% { transform: translateY(100%); }
-  100% { transform: translateY(-100%); }
+/* Responsividade */
+@media (max-width: 768px) {
+  .face {
+    max-width: 300px;
+  }
+  .card, .card-back {
+    height: 450px;
+    max-width: 300px;
+  }
+  .image img {
+    width: 120px;
+    height: 120px;
+  }
+  .content h3 {
+    font-size: 1.2rem;
+  }
+  #read-btn {
+    width: 8rem;
+    height: 2rem;
+    font-size: 0.9rem;
+  }
 }
 
+@media (max-width: 480px) {
+  .face {
+    max-width: 260px;
+  }
+  .card, .card-back {
+    height: 400px;
+    max-width: 260px;
+  }
+  .image img {
+    width: 100px;
+    height: 100px;
+  }
+  .content h3 {
+    font-size: 1rem;
+  }
+  #read-btn {
+    width: 7rem;
+    height: 1.8rem;
+    font-size: 0.8rem;
+  }
+}
