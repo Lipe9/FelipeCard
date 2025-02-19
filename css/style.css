@@ -371,18 +371,4 @@ h2:hover::before {
 }
 
 
-@media only screen and (max-width: 420px) {
-  .card, .card-back {
-    width: 20rem;
-    height: 600px;
-    
-    margin: auto auto auto 44px;
-  }
-  .content h3 {
-    margin: 4px 0 40px 0;
-  }
-  #read-btn {
-    margin-top: 42px;
-  }
-}
 
