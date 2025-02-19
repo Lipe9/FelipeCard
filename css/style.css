@@ -63,9 +63,9 @@ p {
 
 .card-back {
 
-  width: 25rem;
+  width: 30rem;
 
-  height: 500px;
+  height: 600px;
 
   background: var(--card);
 
@@ -119,9 +119,9 @@ p {
 
 .card {
 
-  width: 25rem;
+  width: 30rem;
 
-  height: 500px;
+  height: 600px;
 
   background: var(--card);
 
