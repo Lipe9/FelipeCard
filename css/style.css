@@ -744,10 +744,7 @@ th-child(2):hover {
   backface-visibility: hidden;
   overflow: hidden;
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: space-between;
-}
+  }
 
 .card-container {
   width: 500px;
