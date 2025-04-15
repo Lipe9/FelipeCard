@@ -728,30 +728,7 @@ th-child(2):hover {
 
 /*Teste*/
 
-.curso {
-
-  width: 500px;
-
-  height: 600px;
-
-}
-.curso.active3 .card-curso{
-
-  transform: rotateY(180deg);
-
-  z-index: 0;
-
-}
-
-.curso.active3 .card-back {
-
-  transform: rotateX(0);
-
-  z-index: 1;
-
-}
-
-.card-curso{
+.card-curso {
 
   width: 30rem;
 
@@ -759,15 +736,15 @@ th-child(2):hover {
 
   background: var(--card);
 
-  padding: 25px;
+  padding: 24px;
 
   display: flex;
 
   flex-direction: column;
 
-  align-items: center;
-
   justify-content: center;
+
+  align-items: center;
 
   text-align: justify;
 
@@ -779,29 +756,18 @@ th-child(2):hover {
 
   overflow: hidden;
 
-  z-index: 1;
-
   transition: all 0.4s ease;
 
 }
 
+.card-curso {
 
+  transform: rotateY(-180deg);
 
-.card-curso span:first-of-type {
-
-  position: absolute;
-
-  top: 0;
-
-  left: 0;
-
-  width: 100%;
-
-  height: 3px;
-
-  background: linear-gradient(to right, transparent, rgb(49, 191, 42));
-
-  animation: animar1 2s linear infinite;
+  backface-visibility: hidden;
 
 }
+
+
+
 
