@@ -789,6 +789,30 @@ th-child(2):hover {
   margin-bottom: 10px;
   font-size: 14px;
 }
+.content-cursos {
+  margin-top: -40px; /* Substitui ou adiciona isso */
+}
+.card-cursos {
+  justify-content: flex-start;
+  padding-top: 40px;
+}
+.cred-btn {
+  display: inline-block;
+  margin-top: 5px;
+  background-color: var(--efeitos);
+  color: var(--titulo);
+  padding: 4px 10px;
+  font-size: 12px;
+  text-decoration: none;
+  border-radius: 2px;
+  transition: 0.3s ease-in-out;
+}
+
+.cred-btn:hover {
+  background: transparent;
+  color: rgb(49, 191, 42);
+  border: 1px solid rgb(49, 191, 42);
+}
 
 /*.card-cursos button {
   margin-top: 30px;
