@@ -790,10 +790,10 @@ th-child(2):hover {
   font-size: 14px;
 }
 .content-cursos {
-  margin-top: -20px; /* Substitui ou adiciona isso */
+  margin-top: -50px; /* Substitui ou adiciona isso */
 }
 .card-cursos{
-  padding-top: 40px;
+  padding-top: 50px;
 }
 .cred-btn {
   display: inline-block;
