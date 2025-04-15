@@ -1,0 +1,42 @@
+
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Felipe - Card</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="shortcut icon" href="img/Felipe (1).png" type="image/x-icon">
+</head>
+
+<body>
+    <div class="card-container">
+        <div class="card" id="card">
+            <div class="card-face card-front">
+                <img src="img/Felipe (1).gif" alt="Felipe" class="profile-pic">
+                <h1>Felipe</h1>
+                <p>Desenvolvedor Front-End</p>
+                <button onclick="showBack()">Saiba Mais</button>
+                <button onclick="showCourses()">Cursos</button>
+            </div>
+            <div class="card-face card-back">
+                <h2>Sobre Mim</h2>
+                <p>Sou apaixonado por tecnologia e desenvolvimento web. Gosto de transformar ideias em interfaces bonitas.</p>
+                <button onclick="showFront()">Voltar</button>
+            </div>
+            <div class="card-face card-courses">
+                <h2>Cursos</h2>
+                <ul>
+                    <li>HTML, CSS e JavaScript</li>
+                    <li>React JS</li>
+                    <li>UI/UX Design</li>
+                </ul>
+                <button onclick="showFront()">Voltar</button>
+            </div>
+        </div>
+    </div>
+    <script src="js/javascript.js"></script>
+</body>
+
+</html>
