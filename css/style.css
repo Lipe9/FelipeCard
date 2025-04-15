@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
 
 :root {
   --background: #0A0A0A;
@@ -23,149 +23,143 @@ body {
   min-height: 100vh;
 }
 
-p {
-  color: #fff;
-  margin: 5px 0;
-}
-
-.face {
-  width: 500px;
-  height: 600px;
-  position: relative;
+.container {
   perspective: 1000px;
 }
 
-.card, .card-back, .card-cursos {
+.card-container {
+  position: relative;
+  width: 500px;
+  height: 600px;
+  transform-style: preserve-3d;
+  transition: transform 0.8s;
+}
+
+.card {
   width: 100%;
   height: 100%;
   background: var(--card);
+  border-radius: 8px;
+  padding: 20px;
+  box-shadow: 0 10px 15px rgba(0, 0, 0, 0.5);
   position: absolute;
   top: 0;
   left: 0;
-  padding: 25px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
-  border-radius: 0.2rem;
-  box-shadow: 0 8px 10px 0;
-  transition: transform 0.6s ease;
   backface-visibility: hidden;
 }
 
-/* Frente */
-.card {
-  transform: rotateY(0deg);
-  z-index: 3;
-}
-
-/* Verso */
 .card-back {
-  transform: rotateY(180deg);
-  z-index: 2;
-}
-
-/* Terceira tela */
-.card-cursos {
   transform: rotateY(180deg);
   z-index: 1;
 }
 
-/* Rotações ativadas */
-.face.active .card {
-  transform: rotateY(180deg);
-}
-.face.active .card-back {
-  transform: rotateY(0deg);
-  z-index: 4;
-}
-.face.active3 .card, .face.active3 .card-back {
-  transform: rotateY(180deg);
-}
-.face.active3 .card-cursos {
-  transform: rotateY(0deg);
-  z-index: 5;
+.card-cursos {
+  transform: rotateY(180deg) rotateX(180deg);
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
 
-/* Conteúdo visual */
+.card-container.show-back {
+  transform: rotateY(180deg);
+}
+
+.card-container.show-cursos {
+  transform: rotateY(180deg) rotateX(180deg);
+}
+
 .image img {
   width: 180px;
-  height: 170px;
+  height: 180px;
   border-radius: 50%;
-  border: 2px solid var(--efeitos);
-  margin-bottom: 16px;
+  border: 3px solid var(--efeitos);
   animation: borderAnimated 5s linear infinite;
+  display: block;
+  margin: 0 auto 20px;
 }
 
 @keyframes borderAnimated {
-  0%   { border-color: #2abf3b; }
-  25%  { border-color: rgb(12, 236, 120); }
-  50%  { border-color: #17ae3a; }
-  75%  { border-color: rgb(12, 236, 61); }
+  0% { border-color: #2abf3b; }
+  25% { border-color: rgb(12, 236, 120); }
+  50% { border-color: #17ae3a; }
+  75% { border-color: rgb(12, 236, 61); }
   100% { border-color: #067611; }
 }
 
-.content h3,
-.content-back h3,
-.card-cursos h3 {
+h3, h2 {
   color: var(--titulo);
-  margin-bottom: 16px;
-  font-size: 1.6rem;
+  text-align: center;
+  margin-bottom: 10px;
   position: relative;
 }
 
+p {
+  color: var(--texto);
+  margin-bottom: 6px;
+}
+
+button {
+  width: 200px;
+  height: 40px;
+  background: var(--efeitos);
+  border: none;
+  color: var(--titulo);
+  font-weight: bold;
+  margin: 10px auto 0;
+  display: block;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+button:hover {
+  background: transparent;
+  border: 1px solid var(--efeitos);
+  color: var(--efeitos);
+}
+
+.social-medias {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  margin: 20px 0;
+}
+
+.social-medias a {
+  font-size: 24px;
+  color: white;
+  transition: 0.3s;
+}
+
+.social-medias a:hover {
+  transform: scale(1.2);
+  color: var(--efeitos);
+}
+
 .skills {
-  width: 100%;
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  gap: 8px;
+  gap: 10px;
   margin: 20px 0;
 }
 
 .skills a {
   background: var(--background);
+  padding: 5px 10px;
   color: var(--texto);
-  border-radius: 0.2rem;
-  padding: 0.4em 0.6em;
-  font-size: 13px;
-  letter-spacing: 1px;
-}
-
-button {
-  width: 12rem;
-  height: 3rem;
-  background-color: var(--efeitos);
-  border: none;
-  font-weight: bold;
-  color: var(--titulo);
-  font-size: 16px;
-  margin: 10px;
   border-radius: 4px;
-  cursor: pointer;
-  transition: all 0.3s ease;
+  font-size: 13px;
 }
 
-button:hover {
-  background: transparent;
-  color: var(--efeitos);
-  border: 1px solid var(--efeitos);
+.lista-curso {
+  list-style: none;
+  color: var(--texto);
+  text-align: left;
+  padding: 0 20px;
 }
 
-.social-medias {
-  display: flex;
-  gap: 20px;
-  justify-content: center;
-}
-
-.social-media {
-  font-size: 24px;
-  color: #fff;
-  transition: transform 0.3s ease;
-}
-
-.social-media:hover {
-  transform: scale(1.2);
-  color: var(--efeitos);
+.lista-curso li {
+  margin-bottom: 8px;
 }
