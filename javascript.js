@@ -1,6 +1,6 @@
 var btn = document.getElementById('read-btn');
 var btn2 = document.getElementById('read-btn2');
-var btn2 = document.getElementById('read-btn3');
+var btn3 = document.getElementById('read-btn3');
 
 btn.addEventListener('click', () => {
     var face = document.querySelector('.face');
