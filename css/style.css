@@ -733,3 +733,128 @@ th-child(2):hover {
 
 }
 
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
+
+:root {
+  --background: #0A0A0A;
+  --card: #000000;
+  --titulo: #e4e4e4;
+  --texto: #C8F8DB;
+  --efeitos: rgb(49, 191, 42);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+body {
+  background-color: var(--background);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.card-container {
+  width: 500px;
+  height: 600px;
+  position: relative;
+  perspective: 1200px;
+}
+
+.card {
+  width: 100%;
+  height: 100%;
+  background: var(--card);
+  position: absolute;
+  border-radius: 10px;
+  padding: 20px;
+  color: var(--texto);
+  box-shadow: 0 8px 10px rgba(0, 0, 0, 0.3);
+  transition: transform 0.8s ease-in-out;
+  backface-visibility: hidden;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.face {
+  z-index: 3;
+  transform: rotateY(0deg);
+}
+
+.back {
+  z-index: 2;
+  transform: rotateY(180deg);
+}
+
+.courses {
+  z-index: 1;
+  transform: rotateY(180deg);
+}
+
+.image img {
+  width: 160px;
+  height: 160px;
+  border-radius: 50%;
+  border: 2px solid var(--efeitos);
+}
+
+button {
+  background-color: var(--efeitos);
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  font-weight: bold;
+  cursor: pointer;
+  border-radius: 4px;
+}
+
+button:hover {
+  background-color: transparent;
+  color: var(--efeitos);
+  border: 1px solid var(--efeitos);
+}
+
+.skills {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  justify-content: center;
+}
+
+.skills a {
+  background-color: var(--background);
+  color: var(--texto);
+  padding: 5px 10px;
+  border-radius: 5px;
+  font-size: 14px;
+}
+
+.social-medias {
+  display: flex;
+  gap: 20px;
+  margin-top: 20px;
+}
+
+.social-medias a {
+  font-size: 24px;
+  color: white;
+}
+
+.social-medias a:hover {
+  color: var(--efeitos);
+}
+
+.div-btn {
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+  margin-top: 20px;
+}
