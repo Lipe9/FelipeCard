@@ -25,10 +25,10 @@ btn2.addEventListener('click', () => {
 });
 
 btn3.addEventListener('click', () => {
-    var face = document.querySelector('.curso');
-    face.classList.toggle('active3');
+    var curso = document.querySelector('.curso');
+    curso.classList.toggle('active3');
 
-    if (face.classList.contains('active3')) {
+    if (curso.classList.contains('active3')) {
         return btn3.textContent = 'Cursos';
     }
 
