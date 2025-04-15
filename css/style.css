@@ -736,15 +736,16 @@ th-child(2):hover {
 
 .card {
   background: var(--card);
- 
-  border-radius: 10px
+  border-radius: 10px;
   color: var(--texto);
   box-shadow: 0 8px 10px rgba(0, 0, 0, 0.3);
   transition: transform 0.8s ease-in-out;
   backface-visibility: hidden;
   overflow: hidden;
   display: flex;
-  }
+  flex-direction: column;
+}
+
 
 .card-container {
   width: 500px;
