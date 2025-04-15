@@ -727,6 +727,49 @@ th-child(2):hover {
 }
 
 /*Teste*/
+.card-cursos {
+  width: 30rem;
+  height: 600px;
+  background: var(--card);
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: justify;
+  position: absolute;
+  border-radius: 0.2rem;
+  box-shadow: 0 8px 10px 0;
+  overflow: hidden;
+  transform: rotateY(180deg);
+  backface-visibility: hidden;
+  z-index: 0;
+  transition: all 0.4s ease;
+}
+
+.face.active3 .card-cursos {
+  transform: rotateY(0deg);
+  z-index: 2;
+}
+
+.face.active3 .card,
+.face.active3 .card-back {
+  z-index: 0;
+  transform: rotateY(180deg);
+}
+
+.content-cursos h3 {
+  color: var(--titulo);
+  margin-bottom: 20px;
+  font-size: 24px;
+  text-align: center;
+}
+
+.content-cursos p {
+  color: var(--texto);
+  font-size: 14px;
+  margin: 6px 0;
+}
 
 
 
