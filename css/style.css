@@ -792,7 +792,7 @@ th-child(2):hover {
 .content-cursos {
   margin-top: -20px; /* Substitui ou adiciona isso */
 }
-.card-cursos 
+.card-cursos{
   padding-top: 20px;
 }
 .cred-btn {
