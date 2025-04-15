@@ -150,11 +150,6 @@ p {
   transition: all 0.4s ease;
 
 }
-.card {
-  color: var(--texto);
-  transition: transform 0.8s ease-in-out;
-  backface-visibility: hidden;
-}
 
 
 
@@ -736,58 +731,5 @@ th-child(2):hover {
 
   transition: 0.5s ease;
 
-}
-
-.card-container {
-  width: 500px;
-  height: 600px;
-  position: relative;
-  perspective: 1200px;
-}
-
-
-.face {
-  z-index: 3;
-  transform: rotateY(0deg);
-}
-
-.back {
-  z-index: 2;
-  transform: rotateY(180deg);
-}
-
-.courses {
-  z-index: 1;
-  transform: rotateY(180deg);
-}
-
-.skills {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 8px;
-  justify-content: center;
-}
-
-.skills a {
-  background-color: var(--background);
-  color: var(--texto);
-  padding: 5px 10px;
-  border-radius: 5px;
-  font-size: 14px;
-}
-
-.social-medias {
-  display: flex;
-  gap: 20px;
-  margin-top: 20px;
-}
-
-.social-medias a {
-  font-size: 24px;
-  color: white;
-}
-
-.social-medias a:hover {
-  color: var(--efeitos);
 }
 
