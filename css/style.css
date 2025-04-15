@@ -733,3 +733,64 @@ th-child(2):hover {
 
 }
 
+/* Novo */
+
+
+.card-cursos {
+  width: 30rem;
+  height: 600px;
+  background: var(--card);
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: justify;
+  position: absolute;
+  border-radius: 0.2rem;
+  box-shadow: 0 8px 10px 0;
+  overflow: hidden;
+  transform: rotateY(180deg);
+  backface-visibility: hidden;
+  opacity: 0;
+  transition: all 0.4s ease;
+  z-index: 0;
+}
+
+.face.active3 .card-cursos {
+  opacity: 1;
+  transform: rotateY(0);
+  z-index: 2;
+}
+
+.card-cursos h3 {
+  text-align: center;
+  color: var(--titulo);
+  margin-bottom: 20px;
+  font-size: 20px;
+}
+
+.card-cursos ul {
+  list-style: none;
+  padding: 0;
+}
+
+.card-cursos li {
+  color: var(--texto);
+  margin-bottom: 10px;
+  font-size: 14px;
+}
+
+.card-cursos button {
+  margin-top: 30px;
+  width: 12rem;
+  height: 3rem;
+  background-color: var(--efeitos);
+  border: none;
+  font-weight: bold;
+  color: var(--titulo);
+  font-size: 16px;
+  padding: 4px;
+  border-radius: 2px;
+  cursor: pointer;
+}
