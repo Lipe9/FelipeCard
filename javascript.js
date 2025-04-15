@@ -24,8 +24,8 @@ btn2.addEventListener('click', () => {
     btn2.textContent = 'Voltar';
 
     btn3.addEventListener('click', () => {
-    var face = document.querySelector('.face');
-    face.classList.toggle('active');
+    var face = document.querySelector('');
+    face.classList.toggle('');
 
     if (face.classList.contains('active')) {
         return btn.textContent = 'Saiba Mais';
