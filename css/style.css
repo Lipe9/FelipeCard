@@ -728,60 +728,7 @@ th-child(2):hover {
 
 /*Teste*/
 
-.card-curso {
 
-  width: 30rem;
-
-  height: 600px;
-
-  background: var(--card);
-
-  padding: 24px;
-
-  display: flex;
-
-  flex-direction: column;
-
-  justify-content: center;
-
-  align-items: center;
-
-  text-align: justify;
-
-  position: absolute;
-
-  border-radius: 0.2rem;
-
-  box-shadow: 0 8px 10px 0;
-
-  overflow: hidden;
-
-  transition: all 0.4s ease;
-
-}
-
-.card-curso {
-
-  transform: rotateY(-180deg);
-
-  backface-visibility: hidden;
-
-}
-.card-back.active2 .card-curso{
-
-  transform: rotateY(180deg);
-
-  z-index: 0;
-
-}
-
-.card-back.active2 .curso{
-
-  transform: rotateX(0);
-
-  z-index: 1;
-
-}
 
 
 
