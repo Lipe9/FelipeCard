@@ -22,8 +22,9 @@ btn2.addEventListener('click', () => {
     }
 
     btn2.textContent = 'Voltar';
+});
 
-    btn3.addEventListener('click', () => {
+btn3.addEventListener('click', () => {
     var face = document.querySelector('');
     face.classList.toggle('');
 
