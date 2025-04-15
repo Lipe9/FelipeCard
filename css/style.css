@@ -26,7 +26,19 @@
   font-family: 'Poppins', sans-serif;
 
 }
+* {
+  user-select: none;
+  -webkit-user-select: none;
+  -ms-user-select: none;
+}
 
+body {
+  -webkit-tap-highlight-color: transparent;
+}
+
+button:focus {
+  outline: none;
+}
 body {
 
   background-color: var(--background);
