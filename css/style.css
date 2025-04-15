@@ -635,7 +635,7 @@ h2:hover::before {
 
 }
 
-#read-btn2{
+#read-btn2, #read-btn-voltar {
   width: 12rem;
   height: 3rem;
   border: none;
