@@ -28,7 +28,7 @@ btn2.addEventListener('click', () => {
     face.classList.toggle('');
 
     if (face.classList.contains('active')) {
-        return btn.textContent = 'Saiba Mais';
+        return btn3.textContent = 'Saiba Mais';
     }
 
     btn3.textContent = 'Voltar';
