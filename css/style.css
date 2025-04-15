@@ -595,7 +595,7 @@ h2:hover::before {
 
 
 
-#read-btn, #read-btn2 {
+#read-btn, #read-btn3 {
 
   width: 12rem;
 
@@ -623,21 +623,28 @@ h2:hover::before {
 
 }
 
-
-
+#read-btn2{
+  width: 12rem;
+  height: 3rem;
+  border: none;
+  font-weight: bold;
+  font-size: 16px;
+  padding: 4px;
+  margin-top: 4px;
+  border-radius: 2px;
+  cursor: pointer;
+  transition: all 0.3s ease-in;
+  background: transparent;
+  color: rgb(49, 191, 42);
+  transition: all .4s;
+  border: 1px solid ;  
+}
 .div-btn {
-
   margin: -20px 0 -60px 0;
-
   padding: 20px;
-
 }
 
-
-
-
-
-#read-btn:hover, #read-btn2:hover {
+#read-btn:hover, #read-btn3:hover {
 
   background: transparent;
 
@@ -648,23 +655,13 @@ h2:hover::before {
   border: 1px solid ;
 
 }
-
-
-
 .content-back .social-medias {
-
   display: flex;
-
   justify-content: space-around;
-
   margin: auto;
-
   margin-top: -90px;
 
 }
-
-
-
 .content-back .social-media {
 
   text-decoration: none;
