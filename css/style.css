@@ -767,6 +767,21 @@ th-child(2):hover {
   backface-visibility: hidden;
 
 }
+.card-back.active2 .card-curso{
+
+  transform: rotateY(180deg);
+
+  z-index: 0;
+
+}
+
+.card-back.active2 .curso{
+
+  transform: rotateX(0);
+
+  z-index: 1;
+
+}
 
 
 
