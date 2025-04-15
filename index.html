@@ -4,94 +4,90 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Felipe - Card</title>
-  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="style.css">
   <link rel="shortcut icon" href="img/Felipe (1).png" type="image/x-icon">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>
 
-  <section class="container">
-    <div class="card-container">
-
-      <div class="card face">
-        <div class="image">
-          <img src="img/Felipe (1).gif" alt="foto pessoal" class="image1">
-        </div>
-        <div class="content">
-          <h3>Felipe Silva</h3>
-          <p>￮ Informática Básica.</p>
-          <p>￮ Técnico em Desenvolvimento de Sistemas.</p>
-          <p>￮ Bacharel em Ciências da Computação 1/8.</p>
-        </div>
-        <button type="button" id="read-btn">Saiba Mais</button>
+<section>
+  <div class="card-container">
+    <!-- Frente -->
+    <div class="card face" id="card-front">
+      <div class="image">
+        <img src="img/Felipe (1).gif" alt="foto pessoal" class="image1">
       </div>
-
-      <div class="card card-back">
-        <div class="content-back">
-          <h3 class="rede">Redes Sociais</h3>
-          <div class="social-medias">
-            <a href="https://github.com/Lipe9"><i class="fa-brands fa-github"></i></a>
-            <a href="https://www.linkedin.com/in/fellipe125-/"><i class="fa-brands fa-linkedin"></i></a>
-            <a href="https://www.instagram.com/felipez_125/"><i class="fa-brands fa-instagram"></i></a>
-            <a href="https://www.tiktok.com/@lipezy9?_t=8hLic4q3bPx&_r=1"><i class="fa-brands fa-tiktok"></i></a>
-          </div>
-        </div>
-        <div class="h3">
-          <h2>Tecnologias que já cursei:</h2>
-        </div>
-        <div class="skills">
-          <a>Python</a><a>HTML</a><a>CSS</a><a>JavaScript</a><a>Java</a><a>C++</a><a>MySQL</a><a>Dart</a><a>Flutter</a>
-        </div>
-        <div class="div-btn">
-          <button type="button" id="read-btn3">Cursos</button>
-          <button type="button" id="read-btn2">Voltar</button>
-        </div>
+      <div class="content">
+        <h3>Felipe Silva</h3>
+        <p>￮ Informática Básica.</p>
+        <p>￮ Técnico em Desenvolvimento de Sistemas.</p>
+        <p>￮ Bacharel em Ciências da Computação 1/8.</p>
       </div>
-
-      <div class="card card-cursos">
-        <h3 class="rede">Cursos em andamento / finalizados</h3>
-        <ul class="lista-curso">
-          <li>Algoritmos e lógica de programação</li>
-          <li>Desenvolvimento Web com HTML, CSS e JS</li>
-          <li>Python para iniciantes</li>
-          <li>Banco de Dados com MySQL</li>
-          <li>Java Intermediário</li>
-          <li>Introdução ao Flutter</li>
-        </ul>
-        <div class="div-btn">
-          <button type="button" id="read-btn4">Voltar</button>
-        </div>
-      </div>
-
+      <button id="btn-to-back">Saiba Mais</button>
     </div>
-  </section>
 
-  <script>
-    const container = document.querySelector('.card-container');
-    const btn = document.getElementById('read-btn');
-    const btn2 = document.getElementById('read-btn2');
-    const btn3 = document.getElementById('read-btn3');
-    const btn4 = document.getElementById('read-btn4');
+    <!-- Verso -->
+    <div class="card back" id="card-back">
+      <h3 class="rede">Redes Sociais</h3>
+      <div class="social-medias">
+        <a href="https://github.com/Lipe9"><i class="fa-brands fa-github"></i></a>
+        <a href="https://www.linkedin.com/in/fellipe125-/"><i class="fa-brands fa-linkedin"></i></a>
+        <a href="https://www.instagram.com/felipez_125/"><i class="fa-brands fa-instagram"></i></a>
+        <a href="https://www.tiktok.com/@lipezy9"><i class="fa-brands fa-tiktok"></i></a>
+      </div>
+      <div class="h3">
+        <h2>Tecnologias que já cursei:</h2>
+      </div>
+      <div class="skills">
+        <a>Python</a><a>HTML</a><a>CSS</a><a>JavaScript</a>
+        <a>Java</a><a>C++</a><a>MySQL</a><a>Dart</a><a>Flutter</a>
+      </div>
+      <div class="div-btn">
+        <button id="btn-to-courses">Cursos</button>
+        <button id="btn-to-front">Voltar</button>
+      </div>
+    </div>
 
-    btn.addEventListener('click', () => {
-      container.classList.add('show-back');
-    });
+    <!-- Cursos -->
+    <div class="card courses" id="card-courses">
+      <h2>Cursos Realizados</h2>
+      <p>Em breve você verá a lista aqui!</p>
+      <div class="div-btn">
+        <button id="btn-to-back-from-courses">Voltar</button>
+      </div>
+    </div>
+  </div>
+</section>
 
-    btn2.addEventListener('click', () => {
-      container.classList.remove('show-back');
-    });
+<script>
+  const front = document.getElementById('card-front');
+  const back = document.getElementById('card-back');
+  const courses = document.getElementById('card-courses');
 
-    btn3.addEventListener('click', () => {
-      container.classList.remove('show-back');
-      container.classList.add('show-cursos');
-    });
+  document.getElementById('btn-to-back').onclick = () => {
+    front.style.transform = 'rotateY(180deg)';
+    back.style.transform = 'rotateY(0deg)';
+    courses.style.transform = 'rotateY(180deg)';
+  };
 
-    btn4.addEventListener('click', () => {
-      container.classList.remove('show-cursos');
-    });
-  </script>
+  document.getElementById('btn-to-front').onclick = () => {
+    front.style.transform = 'rotateY(0deg)';
+    back.style.transform = 'rotateY(-180deg)';
+    courses.style.transform = 'rotateY(180deg)';
+  };
+
+  document.getElementById('btn-to-courses').onclick = () => {
+    courses.style.transform = 'rotateY(0deg)';
+    back.style.transform = 'rotateY(180deg)';
+  };
+
+  document.getElementById('btn-to-back-from-courses').onclick = () => {
+    back.style.transform = 'rotateY(0deg)';
+    courses.style.transform = 'rotateY(180deg)';
+  };
+</script>
 
 </body>
 </html>
