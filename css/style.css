@@ -790,7 +790,7 @@ th-child(2):hover {
   font-size: 14px;
 }
 
-.card-cursos button {
+/*.card-cursos button {
   margin-top: 30px;
   width: 12rem;
   height: 3rem;
@@ -802,4 +802,49 @@ th-child(2):hover {
   padding: 4px;
   border-radius: 2px;
   cursor: pointer;
+}*/
+
+
+.card-cursos {
+  display: none;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  text-align: center;
+  color: white;
+  background: #000;
+  width: 30rem;
+  height: 600px;
+  position: absolute;
+  z-index: 3;
+  border-radius: 8px;
+  padding: 30px 25px 20px;
+  animation: fade-slide-in 0.4s ease forwards;
+  overflow-y: auto;
+}
+
+.curso-item {
+  margin-bottom: 20px;
+}
+
+.curso-item p {
+  font-size: 1rem;
+  margin-bottom: 8px;
+  color: var(--texto);
+}
+
+.btn-credencial {
+  background-color: var(--efeitos);
+  color: var(--titulo);
+  text-decoration: none;
+  padding: 6px 12px;
+  border-radius: 4px;
+  font-size: 0.9rem;
+  transition: background 0.3s;
+}
+
+.btn-credencial:hover {
+  background-color: transparent;
+  color: var(--efeitos);
+  border: 1px solid var(--efeitos);
 }
