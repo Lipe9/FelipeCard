@@ -409,7 +409,7 @@ h2:hover::before {
 
 }
 
-.skills{
+.skill{
 
   width: 100%;
 
@@ -425,7 +425,7 @@ h2:hover::before {
 
 }
 
-.skills a {
+.skill a {
 
   background-color: var(--background);
 
