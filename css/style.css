@@ -656,7 +656,7 @@ h2:hover::before {
   padding: 20px;
 }
 
-#read-btn:hover, #read-btn3:hover {
+#read-btn:hover, #read-btn3:hover, #read-btn-voltar:hover {
 
   background: transparent;
 
