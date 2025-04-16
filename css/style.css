@@ -14,7 +14,7 @@
 
 }
 
-{
+*{
 
 margin: 0;
 
@@ -27,7 +27,7 @@ font-family: 'Poppins', sans-serif;
 
 }
 
-{
+*{
 user-select: none;
 -webkit-user-select: none;
 -ms-user-select: none;
@@ -785,4 +785,3 @@ padding: 4px;
 border-radius: 2px;
 cursor: pointer;
 }*/
-
