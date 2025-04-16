@@ -607,7 +607,7 @@ h2:hover::before {
 
 
 
-#read-btn, #read-btn3 #read-btn-voltar{
+#read-btn, #read-btn3, #read-btn-voltar{
 
   width: 12rem;
 
@@ -635,7 +635,7 @@ h2:hover::before {
 
 }
 
-#read-btn2,  {
+#read-btn2 {
   width: 12rem;
   height: 3rem;
   border: none;
@@ -797,7 +797,7 @@ th-child(2):hover {
   padding-top: 40px;
   margin: 20px
 }
-.cred-btn:hover{
+.cred-btn:hover, #read-btn2:hover{
   background-color: var(--efeitos);
   color: var(--titulo);
   transition: 0.3s ease-in-out;
