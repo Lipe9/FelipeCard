@@ -854,3 +854,7 @@ transition: 0.3s ease-in-out;
   }
 }
 
+.face-cursos {
+  position: relative;
+  overflow: hidden; /* opcional pra esconder a linha saindo pra fora */
+}
