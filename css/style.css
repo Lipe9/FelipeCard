@@ -789,10 +789,13 @@ th-child(2):hover {
   margin-bottom: 10px;
   font-size: 14px;
 }
+.content-cursos {
+  margin-top: -40px; /* Substitui ou adiciona isso */
+}
 .card-cursos {
   justify-content: flex-start;
   padding-top: 40px;
-margin: 20px
+  margin: 20px
 }
 .cred-btn {
   display: inline-block;
