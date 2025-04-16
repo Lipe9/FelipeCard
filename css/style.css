@@ -831,30 +831,68 @@ transition: 0.3s ease-in-out;
 }*/
 
 
-.borda-animada {
+.card-cursos span:nth-of-type(1),
+.card-cursos span:nth-of-type(2),
+.card-cursos span:nth-of-type(3),
+.card-cursos span:nth-of-type(4) {
   position: absolute;
+  background: linear-gradient(to right, transparent, rgb(49, 191, 42));
+}
+
+.card-cursos span:nth-of-type(1) {
   top: 0;
   left: 0;
   width: 100%;
+  height: 3px;
+  animation: animar1 2s linear infinite;
+}
+
+.card-cursos span:nth-of-type(2) {
+  top: 0;
+  right: 0;
+  width: 3px;
   height: 100%;
-  border: 2px solid transparent;
-  background: linear-gradient(90deg, lime, transparent, lime);
-  background-size: 400% 400%;
-  animation: bordaGira 4s linear infinite;
-  pointer-events: none;
-  z-index: 1;
+  background: linear-gradient(to bottom, transparent, rgb(49, 191, 42));
+  animation: animar2 2s linear infinite;
+  animation-delay: 1s;
 }
 
-@keyframes bordaGira {
-  0% {
-    background-position: 0% 50%;
-  }
-  100% {
-    background-position: 400% 50%;
-  }
+.card-cursos span:nth-of-type(3) {
+  bottom: 0;
+  right: 0;
+  width: 100%;
+  height: 3px;
+  background: linear-gradient(to left, transparent, rgb(49, 191, 42));
+  animation: animar3 2s linear infinite;
 }
 
-.face-cursos {
-  position: relative;
-  overflow: hidden; /* opcional pra esconder a linha saindo pra fora */
+.card-cursos span:nth-of-type(4) {
+  top: 0;
+  left: 0;
+  width: 3px;
+  height: 100%;
+  background: linear-gradient(to top, transparent, rgb(49, 191, 42));
+  animation: animar4 2s linear infinite;
+  animation-delay: 1s;
+}
+
+/* Reutilize os mesmos keyframes */
+@keyframes animar1 {
+  0% { transform: translateX(-100%); }
+  100% { transform: translateX(100%); }
+}
+
+@keyframes animar2 {
+  0% { transform: translateY(-100%); }
+  100% { transform: translateY(100%); }
+}
+
+@keyframes animar3 {
+  0% { transform: translateX(100%); }
+  100% { transform: translateX(-100%); }
+}
+
+@keyframes animar4 {
+  0% { transform: translateY(100%); }
+  100% { transform: translateY(-100%); }
 }
