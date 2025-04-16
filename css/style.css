@@ -1,310 +1,154 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;1,100;1,200;1,300;1,400&display=swap');
 
 :root {
-
 --background: #0A0A0A;
-
 --card: #000000;
-
 --titulo: #e4e4e4;
-
 --texto: #C8F8DB;
-
 --efeitos: rgb(49, 191, 42);
-
 }
-
 *{
-
 margin: 0;
-
 padding: 0;
-
 box-sizing: border-box;
-
 font-family: 'Poppins', sans-serif;
-
-
-}
-
-*{
 user-select: none;
 -webkit-user-select: none;
 -ms-user-select: none;
+
 }
-
-
 body {
 -webkit-tap-highlight-color: transparent;
+background-color: var(--background);
+scroll-behavior: smooth;
+display: flex;
+align-items: center;
+justify-content: center;
+min-height: 100vh;
+cursor: pointer;
 }
-
 button:focus {
 outline: none;
 }
-body {
-
-background-color: var(--background);
-
-scroll-behavior: smooth;
-
-display: flex;
-
-align-items: center;
-
-justify-content: center;
-
-min-height: 100vh;
-
-cursor: pointer;
-
-}
-
 p {
-
 color: #fff;
-
 margin: 5px 0px;
-
 }
-
 .face {
-
 width: 500px;
-
 height: 600px;
-
 }
-
 .card-back {
-
 width: 30rem;
-
 height: 600px;
-
 background: var(--card);
-
 padding: 24px;
-
 display: flex;
-
 flex-direction: column;
-
 justify-content: center;
-
 align-items: center;
-
 text-align: justify;
-
 position: absolute;
-
 border-radius: 0.2rem;
-
 box-shadow: 0 8px 10px 0;
-
 overflow: hidden;
-
 transition: all 0.4s ease;
-
 }
-
 .card-back {
-
 transform: rotateY(-180deg);
-
 backface-visibility: hidden;
-
 }
-
 .face.active .card{
-
 transform: rotateY(180deg);
-
 z-index: 0;
-
 }
-
 .face.active .card-back {
-
 transform: rotateX(0);
-
 z-index: 1;
-
 }
-
 .card {
-
 width: 30rem;
-
 height: 600px;
-
 background: var(--card);
-
 padding: 25px;
-
 display: flex;
-
 flex-direction: column;
-
 align-items: center;
-
 justify-content: center;
-
 text-align: justify;
-
 position: absolute;
-
 border-radius: 0.2rem;
-
 box-shadow: 0 8px 10px 0;
-
 overflow: hidden;
-
 z-index: 1;
-
 transition: all 0.4s ease;
-
 }
-
 .card span:first-of-type {
-
 position: absolute;
-
 top: 0;
-
 left: 0;
-
 width: 100%;
-
 height: 3px;
-
 background: linear-gradient(to right, transparent, rgb(49, 191, 42));
-
 animation: animar1 2s linear infinite;
-
 }
-
 @keyframes animar1 {
-
 0% {
-
 transform: translateX(-100%);
-
 }
-
 100% {
-
 transform: translateX(100%);
-
-}
-
-}
-
+}}
 .card span:nth-of-type(2) {
-
 position: absolute;
-
 top: 0;
-
 right: 0;
-
 width: 3px;
-
 height: 100%;
-
 background: linear-gradient(to bottom, transparent, rgb(49, 191, 42));
-
 animation: animar2 2s linear infinite;
-
-animation-delay: 1s;
-
+animation-delay: 2s;
 }
-
 @keyframes animar2 {
-
 0% {
-
 transform: translateY(-100%);
-
 }
-
 100% {
-
 transform: translateY(100%);
-
-}
-
-}
-
+}}
 .card span:nth-of-type(3) {
-
 position: absolute;
-
 bottom: 0;
-
 right: 0;
-
 width: 100%;
-
 height: 3px;
-
 background: linear-gradient(to left, transparent,rgb(49, 191, 42) );
-
 animation: animar3 2s linear infinite;
-
 }
-
 @keyframes animar3 {
-
 0% {
-
 transform: translateX(100%);
-
 }
-
 100% {
-
 transform: translateX(-100%);
-
-}
-
-}
-
+}}
 .card span:nth-of-type(4) {
-
 position: absolute;
-
 top: 0;
-
 left: 0;
-
 width: 3px;
-
 height: 100%;
-
 background: linear-gradient(to top, transparent, rgb(49, 191, 42));
-
 animation: animar4 2s linear infinite;
-
 animation-delay: 1s;
-
 }
-
 @keyframes animar4 {
-
 0% {
-
 transform: translateY(100%);
-
 }
-
 100% {
-
 transform: translateY(-100%);
-
-}
-
-}
-
+}}
 .card::before {
 
 content: '';
