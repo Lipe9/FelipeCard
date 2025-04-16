@@ -170,6 +170,37 @@ Credencial →</a>
     btnVoltar.addEventListener('click', () => {
       face.classList.remove('active3');
     });
+
+const card = document.getElementById('card');
+
+function flipCard(face) {
+  const currentRotation = card.style.transform || 'rotateY(0deg)';
+  let newRotation;
+
+  switch (face) {
+    case 'frente':
+      newRotation = 'rotateY(0deg)';
+      break;
+    case 'verso':
+      newRotation = 'rotateY(180deg)';
+      break;
+    case 'cursos':
+      newRotation = 'rotateX(-90deg)';
+      break;
+    default:
+      return;
+  }
+
+  // Só aplica se for uma rotação diferente
+  if (currentRotation !== newRotation) {
+    card.style.transform = newRotation;
+
+    // Gerenciar visibilidade das faces
+    document.getElementById('card-front').style.display = face === 'frente' ? 'flex' : 'none';
+    document.getElementById('card-back').style.display = face === 'verso' ? 'flex' : 'none';
+    document.getElementById('card-courses').style.display = face === 'cursos' ? 'flex' : 'none';
+  }
+}
   </script>
 </body>
 </html>
