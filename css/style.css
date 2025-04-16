@@ -797,22 +797,23 @@ th-child(2):hover {
   padding-top: 40px;
   margin: 20px
 }
+.cred-btn:hover{
+  background-color: var(--efeitos);
+  color: var(--titulo);
+  transition: 0.3s ease-in-out;
+}
+
 .cred-btn {
   display: inline-block;
   margin-top: 5px;
-  background-color: var(--efeitos);
-  color: var(--titulo);
+  background: transparent;
+  color: rgb(49, 191, 42);
+  border: 1px solid rgb(49, 191, 42);
   padding: 4px 10px;
   font-size: 12px;
   text-decoration: none;
   border-radius: 2px;
-  transition: 0.3s ease-in-out;
-}
-
-.cred-btn:hover {
-  background: transparent;
-  color: rgb(49, 191, 42);
-  border: 1px solid rgb(49, 191, 42);
+transition: 0.3s ease-in-out;
 }
 
 /*.card-cursos button {
