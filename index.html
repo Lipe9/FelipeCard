@@ -4,13 +4,10 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Lipe - Card</title>
-
   <link rel="stylesheet" href="css/style.css" />
   <link rel="shortcut icon" href="img/Felipe (1).png" type="image/x-icon" />
-
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-
   <link
     rel="stylesheet"
     href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
@@ -26,28 +23,24 @@
       <div class="card">
         <span></span>
         <span></span>
+        <span></span>
+        <span></span>
         <div class="image">
           <img src="img/Felipe (1).gif" alt="foto pessoal" class="image1" />
         </div>
-
         <div class="content">
           <h3>Felipe Silva</h3>
           <p>￮ Informática Básica.</p>
           <p>￮ Técnico em Desenvolvimento de Sistemas.</p>
           <p>￮ Bacharel em Ciências da Computação 1/8.</p>
         </div>
-
         <button type="button" id="read-btn">Saiba Mais</button>
-
-        <span></span>
-        <span></span>
       </div>
 
       <!-- Verso -->
       <div class="card-back">
         <span></span>
         <span></span>
-
         <div class="content-back">
           <h3 class="rede">Redes Sociais</h3>
           <div class="social-medias">
@@ -65,11 +58,9 @@
             </a>
           </div>
         </div>
-
         <div class="h3">
           <h2> Experiência em tecnologias:</h2>
         </div>
-
         <div class="skill">
           <a>Python</a>
           <a>HTML</a>
@@ -82,84 +73,62 @@
           <a>Dart</a>
           <a>Flutter</a>
         </div>
-
         <div class="div-btn">
           <button type="button" id="read-btn3">Cursos</button>
           <button type="button" id="read-btn2">Voltar</button>
         </div>
-
-        <span></span>
-        <span></span>
       </div>
 
       <!-- Cursos -->
-        <div class="face-cursos">
-        <div class="borda-animada"></div>
-  <!-- resto do conteúdo da tela de cursos -->
       <div class="card-cursos">
         <span></span>
         <span></span>
-
+        <span></span>
+        <span></span>
         <div class="content-cursos">
           <h3>Cursos</h3>
-         <ul>
- <li>
-    Foundations of User Experience (UX) Design - <b>Google</b>
-    <br />
-    <a href="https://www.coursera.org/account/accomplishments/records/AKXWFUV33ZZB" 
-target="_blank" class="cred-btn">
-Credencial →</a>
-  </li>
- <li>
-    Technical Support Fundamentals - <b>Google</b> 
-    <br />
-    <a href="https://www.coursera.org/account/accomplishments/records/XZ7T5XJAJH8D" 
-target="_blank" class="cred-btn">
-Credencial →</a>
-  </li>
- <li>
-    Huawei talent 5G - <b>Huawei</b>
-    <br />
-    <a href="https://talent.shixizhi.huawei.com" target="_blank" class="cred-btn">
-Credencial →</a>
-  </li>
- <li>
-    HTML5: Application Development Fundamentals - <b>IFRS</b>
-    <br />
-    <a href="https://moodle.ifrs.edu.br/mod/simplecertificate/verify.php?code=67d46bc9-e47c-41f6-a780-0f630ade0004" 
-target="_blank" class="cred-btn">
-Credencial →</a>
-  </li>
-<li>
-    CSS3: Estilizando Páginas Web com Estilo - <b>IFRS</b>
-    <br />
-    <a href="https://moodle.ifrs.edu.br/mod/simplecertificate/verify.php?code=67dd410c-7328-4d61-a003-024d0ade0004"
- target="_blank" class="cred-btn">
-Credencial →</a>
-  </li>
-</ul>
+          <ul>
+            <li>
+              Foundations of User Experience (UX) Design - <b>Google</b><br />
+              <a href="https://www.coursera.org/account/accomplishments/records/AKXWFUV33ZZB" 
+                 target="_blank" class="cred-btn">Credencial →</a>
+            </li>
+            <li>
+              Technical Support Fundamentals - <b>Google</b><br />
+              <a href="https://www.coursera.org/account/accomplishments/records/XZ7T5XJAJH8D" 
+                 target="_blank" class="cred-btn">Credencial →</a>
+            </li>
+            <li>
+              Huawei talent 5G - <b>Huawei</b><br />
+              <a href="https://talent.shixizhi.huawei.com" target="_blank" class="cred-btn">Credencial →</a>
+            </li>
+            <li>
+              HTML5: Application Development Fundamentals - <b>IFRS</b><br />
+              <a href="https://moodle.ifrs.edu.br/mod/simplecertificate/verify.php?code=67d46bc9-e47c-41f6-a780-0f630ade0004" 
+                 target="_blank" class="cred-btn">Credencial →</a>
+            </li>
+            <li>
+              CSS3: Estilizando Páginas Web com Estilo - <b>IFRS</b><br />
+              <a href="https://moodle.ifrs.edu.br/mod/simplecertificate/verify.php?code=67dd410c-7328-4d61-a003-024d0ade0004"
+                 target="_blank" class="cred-btn">Credencial →</a>
+            </li>
+          </ul>
           <button type="button" id="read-btn-voltar">Voltar</button>
         </div>
-
-        <span></span>
-        <span></span>
-</div>
       </div>
     </div>
   </section>
 
-  <!-- JS embutido -->
   <script>
     const btn = document.getElementById('read-btn');
     const btn2 = document.getElementById('read-btn2');
     const btn3 = document.getElementById('read-btn3');
     const btnVoltar = document.getElementById('read-btn-voltar');
-
     const face = document.querySelector('.face');
 
     btn.addEventListener('click', () => {
       face.classList.toggle('active');
-      face.classList.remove('active3'); // Garante que cursos não estejam visíveis
+      face.classList.remove('active3');
     });
 
     btn2.addEventListener('click', () => {
@@ -174,37 +143,6 @@ Credencial →</a>
     btnVoltar.addEventListener('click', () => {
       face.classList.remove('active3');
     });
-
-const card = document.getElementById('card');
-
-function flipCard(face) {
-  const currentRotation = card.style.transform || 'rotateY(0deg)';
-  let newRotation;
-
-  switch (face) {
-    case 'frente':
-      newRotation = 'rotateY(0deg)';
-      break;
-    case 'verso':
-      newRotation = 'rotateY(180deg)';
-      break;
-    case 'cursos':
-      newRotation = 'rotateX(-90deg)';
-      break;
-    default:
-      return;
-  }
-
-  // Só aplica se for uma rotação diferente
-  if (currentRotation !== newRotation) {
-    card.style.transform = newRotation;
-
-    // Gerenciar visibilidade das faces
-    document.getElementById('card-front').style.display = face === 'frente' ? 'flex' : 'none';
-    document.getElementById('card-back').style.display = face === 'verso' ? 'flex' : 'none';
-    document.getElementById('card-courses').style.display = face === 'cursos' ? 'flex' : 'none';
-  }
-}
   </script>
 </body>
 </html>
